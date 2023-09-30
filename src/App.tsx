@@ -1,4 +1,4 @@
-import CountryCapitalGame from "@/questions/match-country-city/CountryCapitalGame"
+import CountryCapitalGame from "./questions/match-country-city/CountryCapitalGame"
 
 export default function App() {
   const data = {
