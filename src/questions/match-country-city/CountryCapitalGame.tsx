@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./style.css"
+import Styles from "./style.module.css"
 
 type Props = {
   data: Record<string, string>
@@ -57,13 +57,20 @@ export default function CountryCapitalGame({ data }: Props) {
   if (!options.length) return <h1>Congratulations you won!</h1>
 
   return (
-    <div className="game">
-      <button onClick={() => setOptions(getInitialState(data))}>Reset</button>
-      <div className="options">
+    <div className={Styles.game}>
+      <button
+        onClick={() => {
+          setOptions(getInitialState(data))
+          setPickedOption(undefined)
+        }}
+      >
+        Reset
+      </button>
+      <div className={Styles.option}>
         {options.map((option) => (
           <button
             key={option.value}
-            className={option.state}
+            className={Styles[option.state]}
             onClick={() => handleOptionClick(option)}
           >
             {option.value}
