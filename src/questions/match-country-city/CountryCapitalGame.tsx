@@ -32,6 +32,9 @@ export default function CountryCapitalGame({ data }: Props) {
       setPickedOption(option)
       return
     }
+
+    if (pickedOption.value === option.value) return
+
     const isPickedCountryMatch = data[pickedOption.value] === option.value
     const isPickedCityMatch = pickedOption.value === data[option.value]
     const validPair = isPickedCountryMatch || isPickedCityMatch
@@ -54,7 +57,7 @@ export default function CountryCapitalGame({ data }: Props) {
   if (!options.length) return <h1>Congratulations you won!</h1>
 
   return (
-    <>
+    <div className="game">
       <button onClick={() => setOptions(getInitialState(data))}>Reset</button>
       <div className="options">
         {options.map((option) => (
@@ -67,6 +70,6 @@ export default function CountryCapitalGame({ data }: Props) {
           </button>
         ))}
       </div>
-    </>
+    </div>
   )
 }
