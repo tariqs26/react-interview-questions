@@ -3,6 +3,8 @@
   border: 1px solid black;
   border-radius: 1rem;
   background-color: gray;
+  width: 14rem;
+  align-self: center;
 }
 
 .light {
@@ -11,4 +13,5 @@
   border-radius: 50%;
   border: 1px solid black;
   margin: 1rem auto;
+  transition: background-color 200ms ease-in-out;
 }
