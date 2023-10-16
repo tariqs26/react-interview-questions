@@ -1,4 +1,5 @@
 import CountryCapitalGame from "./questions/match-country-city/CountryCapitalGame"
+import TrafficSignal from "./questions/traffic-signal/TrafficSignal"
 
 export default function App() {
   const data = {
@@ -6,5 +7,10 @@ export default function App() {
     Germany: "Berlin",
   }
 
-  return <CountryCapitalGame data={data} />
+  return (
+    <article className="app">
+      <CountryCapitalGame data={data} />
+      <TrafficSignal />
+    </article>
+  )
 }
