@@ -74,3 +74,9 @@ button:focus-visible {
   padding: 2rem;
   text-align: center;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
